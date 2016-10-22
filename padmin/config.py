@@ -70,8 +70,8 @@ BASIC_ENABLED = False
 SIGNUP_ENABLED = False
 
 # POWERDNS CONFIG
-PDNS_STATS_URL = 'http://powerdns/api/v1/'
-PDNS_API_KEY = 'changeme'
+PDNS_STATS_URL = 'http://dns/api/v1/'
+PDNS_API_KEY = os.environ['API_KEY']
 PDNS_VERSION = '4.0.1'
 
 # RECORDS ALLOWED TO EDIT

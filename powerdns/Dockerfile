@@ -12,9 +12,10 @@ RUN sed -i -e "s/^use-logfile/#use-logfile/g" \
 		-e "s/^setuid/#setuid/g" \
 		/etc/pdns/pdns.conf
 
+COPY create_db.sql /create_db.sql
 COPY start.sh /start.sh
 
-ENV WEBPASSWD=changeme
+ENV API_KEY=changeme
 
 EXPOSE 53
 EXPOSE 53/udp

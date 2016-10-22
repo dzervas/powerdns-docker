@@ -3,15 +3,19 @@ version: "2"
 services:
     dns:
         build: powerdns
+        env_file: .env
         restart: always
         ports:
             - "53:53"
             - "53:53/udp"
         volumes:
-            - "/tmp/power/dns:/data"
+            - "/tmp/power/dns:/var/empty/data"
 
     admin:
         build: padmin
+        depends_on:
+            - dns
+        env_file: .env
         ports:
             - "9393:9393"
         volumes:
