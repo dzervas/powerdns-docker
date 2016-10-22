@@ -1,0 +1,18 @@
+version: "2"
+
+services:
+    dns:
+        build: powerdns
+        restart: always
+        ports:
+            - "53:53"
+            - "53:53/udp"
+        volumes:
+            - "/tmp/power/dns:/data"
+
+    admin:
+        build: padmin
+        ports:
+            - "9393:9393"
+        volumes:
+            - "/tmp/power/admin:/data"
