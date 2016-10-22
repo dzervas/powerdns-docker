@@ -1,3 +1,5 @@
 import app.models
-tmp = app.models.User(username=args[1], plain_text_password=args[2])
+import sys
+
+tmp = app.models.User(username=sys.argv[1], plain_text_password=sys.argv[2])
 tmp.create_local_user()

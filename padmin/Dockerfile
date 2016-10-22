@@ -9,6 +9,7 @@ WORKDIR /src
 RUN pip install -r requirements.txt
 
 COPY config.py /src/
+COPY create_admin.py /src/
 COPY start.sh /start.sh
 
 EXPOSE 9393
