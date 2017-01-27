@@ -15,5 +15,5 @@ EXPOSE 53
 EXPOSE 53/udp
 EXPOSE 80
 
-#VOLUME [ "/var/empty/data" ]
+VOLUME [ "/etc/powerdns/sqlite3/" ]
 CMD ["/start.sh"]

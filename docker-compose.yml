@@ -9,7 +9,7 @@ services:
             - "53:53"
             - "53:53/udp"
         volumes:
-            - "/tmp/power/dns:/var/empty/data"
+            - "/tmp/power/dns:/etc/powerdns/sqlite3/"
 
     admin:
         build: padmin
