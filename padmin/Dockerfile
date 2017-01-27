@@ -1,8 +1,9 @@
-#FROM python:2
 FROM python:2-alpine
 MAINTAINER Dimitris Zervas <dzervas@dzervas.gr>
 
-RUN apk add --update bash build-base git libffi-dev openldap-dev python-dev && rm -rf /var/cache/apk/*
+RUN apk add --update sudo build-base git libffi-dev openldap-dev python-dev && \
+	rm -rf /var/cache/apk/*
+
 RUN git clone https://github.com/ngoduykhanh/PowerDNS-Admin /src
 WORKDIR /src
 

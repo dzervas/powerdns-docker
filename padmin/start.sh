@@ -8,9 +8,7 @@ if [ ! -f /data/padmin.sqlite ]; then
 	echo "Creating PowerDNS-Admin database..."
 	touch /data/padmin.sqlite
 	python create_db.py
-
-	echo "Adding admin user..."
-	python create_admin.py root password
 fi
+chown nobody /data/padmin.sqlite
 
-python run.py
+exec sudo -Eu nobody python run.py
