@@ -11,4 +11,4 @@ if [ ! -f /data/padmin.sqlite ]; then
 fi
 chown nobody /data/padmin.sqlite
 
-exec sudo -Eu nobody python run.py
+exec sudo -u nobody python run.py

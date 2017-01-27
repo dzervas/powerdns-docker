@@ -9,8 +9,6 @@ RUN echo "deb http://repo.powerdns.com/debian jessie-auth-40 main" > /etc/apt/so
 COPY create_db.sql /create_db.sql
 COPY start.sh /start.sh
 
-ENV API_KEY=changeme
-
 EXPOSE 53
 EXPOSE 53/udp
 EXPOSE 80
