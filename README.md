@@ -1,5 +1,5 @@
 # powerdns-docker
-PowerDNS & PowerDNS-Admin docker image
+[PowerDNS](https://www.powerdns.com/) & [PowerDNS-Admin](https://github.com/ngoduykhanh/PowerDNS-Admin) docker images
 
 Beware, these images are configured to use SQLite and are intended to run for small-scale usecases.
 If you want to cover larger scale usecases use MySQL/MariaDB/PostgreSQL backends.
