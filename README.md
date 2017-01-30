@@ -13,6 +13,6 @@ cd powerdns-docker && docker-compose up -d
 To create a new administrator (run the image once to create the database, before attempting to create an admin):
 ```
 docker-compose stop admin
-docker-compose run python create_admin.py myusername mypassword
+docker-compose run admin python create_admin.py myusername mypassword
 docker-compose restart admin
 ```
